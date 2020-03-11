@@ -13,6 +13,7 @@ spec:
     spec:
       containers:
       - image: shaacr.azurecr.io/springboot-mongo:latest
+        imagePullPolicy: Always
         name: springboot
         ports:
         - name: springboot
