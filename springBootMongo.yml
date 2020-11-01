@@ -15,7 +15,7 @@ spec:
         name: springboot
     spec:
       containers:
-      - image: funacr.azurecr.io/lionhuntdig/springboot-mongo:latest
+      - image: funacr.azurecr.io/lionhuntdig/springboot-mongo:$(Build.BuildId)
         imagePullPolicy: Always
         name: springboot
         ports:
