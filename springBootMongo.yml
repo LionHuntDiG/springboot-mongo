@@ -6,6 +6,9 @@ metadata:
   name: spring-controller
 spec:
   replicas: 2
+  selector:
+    matchLabels:
+      name: springboot
   template:
     metadata:
       labels:
@@ -43,6 +46,9 @@ metadata:
   name: mongo-controller
 spec:
   replicas: 2
+  selector:
+    matchLabels:
+      name: mongo
   template:
     metadata:
       labels:
