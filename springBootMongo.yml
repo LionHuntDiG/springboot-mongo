@@ -12,7 +12,7 @@ spec:
         name: springboot
     spec:
       containers:
-      - image: shaacr.azurecr.io/springboot-mongo:latest
+      - image: docker pull funacr.azurecr.io/lionhuntdig/springboot-mongo
         imagePullPolicy: Always
         name: springboot
         ports:
