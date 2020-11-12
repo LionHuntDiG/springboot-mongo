@@ -27,6 +27,10 @@ jobs:
         docker build -t funacr.azurecr.io/spring:v1 .
         az acr login  -n funacr.azurecr.io --username funacr --password PbrhYU36JgUQl6EMYGfdvrxp3s=NES1e
         docker push funacr.azurecr.io/spring:v1
+    - name: Azure Login
+      uses: Azure/login@v1
+      with:
+         # Paste output of `az ad sp create-for-rbac` as value of secret variable: AZURE_CREDENTIALS
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
    
- 
    
