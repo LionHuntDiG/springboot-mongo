@@ -32,5 +32,11 @@ jobs:
       with:
          # Paste output of `az ad sp create-for-rbac` as value of secret variable: AZURE_CREDENTIALS
         creds: ${{ secrets.AZURE_CREDENTIALS }}
-   
-   
+    - name: Deploy to Kubernetes cluster
+      uses: Azure/k8s-deploy@v1.3
+      with:
+        # Path to the manifest files which will be used for deployment.
+        manifests: springBootMongo.yml
+         # Fully qualified resource URL of the image(s) to be used for substitutions on the manifest files Example: contosodemo.azurecr.io/helloworld:test
+        images: funacr.azurecr.io/spring:v1
+        
