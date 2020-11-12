@@ -1,10 +1,13 @@
 apiVersion: v1
-kind: ReplicationController
+kind: Deployment
 metadata:
   labels:
     name: springboot
-  name: spring-controller
+  name: springboot
 spec:
+  selector:
+    matchLabels:
+      name: springboot
   replicas: 1
   template:
     metadata:
@@ -36,12 +39,15 @@ spec:
 ---
 # Mongo host path rc
 apiVersion: v1
-kind: ReplicationController
+kind: Deployment
 metadata:
   labels:
     name: mongo
-  name: mongo-controller
+  name: mongodb
 spec:
+  selector:
+    matchLabels: 
+      name: mongo
   replicas: 1
   template:
     metadata:
