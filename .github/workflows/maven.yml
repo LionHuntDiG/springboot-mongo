@@ -48,4 +48,4 @@ jobs:
         manifests: springBootMongo.yml
          # Fully qualified resource URL of the image(s) to be used for substitutions on the manifest files Example: contosodemo.azurecr.io/helloworld:test
         images: funacr.azurecr.io/spring:v1
-        
+        force: true
