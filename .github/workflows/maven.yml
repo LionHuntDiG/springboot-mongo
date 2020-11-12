@@ -46,7 +46,7 @@ jobs:
       with:
         # comma separated list of XML/JSON/YAML files in which tokens are to be substituted. Files names must be specified relative to the folder-path.
         files: |
-          springBootMongo.yml
+          *.yml
     - name: Deploy to Kubernetes cluster
       uses: Azure/k8s-deploy@v1.3
       with:
