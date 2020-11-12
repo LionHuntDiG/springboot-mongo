@@ -47,5 +47,5 @@ jobs:
         # Path to the manifest files which will be used for deployment.
         manifests: springBootMongo.yml
          # Fully qualified resource URL of the image(s) to be used for substitutions on the manifest files Example: contosodemo.azurecr.io/helloworld:test
-        images: funacr.azurecr.io/spring:v1
+        images: funacr.azurecr.io/spring:${{ github.run_number }}
         force: true
