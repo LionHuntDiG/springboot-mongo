@@ -25,7 +25,7 @@ jobs:
     - name: docker build
       run: |
         docker build -t funacr.azurecr.io/spring:v1 .
-        az acr login funacr.azurecr.io --username funacr --password PbrhYU36JgUQl6EMYGfdvrxp3s=NES1e
+        az acr login  -n funacr.azurecr.io --username funacr --password PbrhYU36JgUQl6EMYGfdvrxp3s=NES1e
         docker push funacr.azurecr.io/spring:v1
    
  
