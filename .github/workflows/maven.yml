@@ -24,7 +24,7 @@ jobs:
       run: mvn package --file pom.xml
     - name: docker build
       run: |
-        docker build -t funacr.azurecr.io/spring:${{ github.run_number }} .
+        docker build -f $GITHUB_WORKSPACE/Dockerfile -t funacr.azurecr.io/spring:${{ github.run_number }} .
         az acr login  -n funacr.azurecr.io --username funacr --password PbrhYU36JgUQl6EMYGfdvrxp3s=NES1e
         docker push funacr.azurecr.io/spring:${{ github.run_number }}
     - name: Azure Login
