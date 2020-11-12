@@ -48,7 +48,7 @@ jobs:
         container-registry-url: ${{ secrets.REGISTRY_NAME }}.azurecr.io
         container-registry-username: ${{ secrets.REGISTRY_USERNAME }}
         container-registry-password: ${{ secrets.REGISTRY_PASSWORD }}
-        secret-name: ${{ secret.REGISTRY_NAME }}-registry-connection
+        secret-name: ${{ secrets.REGISTRY_NAME }}-registry-connection
         
     - name: Deploy to Kubernetes cluster
       uses: Azure/k8s-deploy@v1.3
