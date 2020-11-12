@@ -20,7 +20,7 @@ spec:
         name: springboot
         ports:
         - name: springboot
-          containerPort: 8080      
+          containerPort: 8081     
 ---
 # Node Port Service
 apiVersion: v1
@@ -32,8 +32,8 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-    - port: 8080
-      targetPort: 8080
+  - port: 8081
+    targetPort: 8081
   selector:
     name: springboot
 ---
@@ -79,7 +79,7 @@ metadata:
 spec:
   type: ClusterIP
   ports:
-    - port: 27017
-      targetPort: 27017
+  - port: 27017
+    targetPort: 27017
   selector:
     name: mongo
