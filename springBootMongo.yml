@@ -15,7 +15,7 @@ spec:
         name: springboot
     spec:
       containers:
-      - image: funacr.azurecr.io/spring:31
+      - image: funacr.azurecr.io/spring:32
         imagePullPolicy: Always
         name: springboot
         ports:
