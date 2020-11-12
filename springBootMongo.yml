@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
@@ -38,7 +38,7 @@ spec:
     name: springboot
 ---
 # Mongo host path rc
-apiVersion: v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
