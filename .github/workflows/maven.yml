@@ -32,6 +32,15 @@ jobs:
       with:
          # Paste output of `az ad sp create-for-rbac` as value of secret variable: AZURE_CREDENTIALS
         creds: ${{ secrets.AZURE_CREDENTIALS }}
+    - name: Azure Kubernetes set context
+      uses: Azure/aks-set-context@v1
+      with:
+        # Azure credentials i.e. output of `az ad sp create-for-rbac --sdk-auth`
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+        # Resource Group Name
+        resource-group: funrg
+        # AKS Cluster Name
+        cluster-name: funAKS
     - name: Deploy to Kubernetes cluster
       uses: Azure/k8s-deploy@v1.3
       with:
