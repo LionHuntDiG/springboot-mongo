@@ -15,7 +15,7 @@ spec:
         name: springboot
     spec:
       containers:
-      - image: funacr.azurecr.io/spring:37
+      - image: funacr.azurecr.io/spring:${{ github.run_number }}
         imagePullPolicy: Always
         name: springboot
         ports:
