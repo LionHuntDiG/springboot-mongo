@@ -1,24 +1,30 @@
 #storageCLass
-apiVersion: storage.k8s.io/v1
 kind: StorageClass
+apiVersion: storage.k8s.io/v1
 metadata:
-  name: spring-storageclass
-provisioner: kubernetes.io/azure-disk
+  name: my-azurefile
+provisioner: kubernetes.io/azure-file
+mountOptions:
+  - dir_mode=0777
+  - file_mode=0777
+  - uid=0
+  - gid=0
+  - mfsymlinks
+  - cache=strict
 parameters:
   skuName: Standard_LRS
-  location: eastus
 ---
 #persistent-Volumeclaim
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: pvc-azuredisk-pv1
+  name: my-azurefile
 spec:
-  storageClassName: spring-storageclass
   accessModes:
     - ReadWriteMany
+  storageClassName: my-azurefile
   resources:
     requests:
-      storage: 500Mi
+      storage: 5Gi
   
   
