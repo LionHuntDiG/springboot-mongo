@@ -61,13 +61,13 @@ spec:
         - name: mongo
           containerPort: 27017
           hostPort: 27017
-        volumeMounts:
-        - name: mongo-persistent-storage
-          mountPath: /data/db
-      volumes:
-      - name: mongo-persistent-storage
-        hostPath:
-         path: /tmp/dbbackup
+       volumeMounts:
+       - mountPath: "/mnt/azure"
+         name: volume
+    volumes:
+    - name: volume
+      persistentVolumeClaim:
+        claimName: my-azurefile
 ---
 # Mongo Node Port RC
 apiVersion: v1
