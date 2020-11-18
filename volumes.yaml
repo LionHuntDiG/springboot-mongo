@@ -1,0 +1,24 @@
+#storageCLass
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: spring-storageclass
+provisioner: kubernetes.io/azure-disk
+parameters:
+  skuName: Standard_LRS
+  location: eastus
+---
+#persistent-Volumeclaim
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-azuredisk-pv1
+spec:
+  storageClassName: spring-storageclass
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 500Mi
+  
+  
