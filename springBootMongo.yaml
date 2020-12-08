@@ -15,7 +15,7 @@ spec:
         name: springboot
     spec:
       containers:
-      - image:  shaacr.azurecr.io/spring-mongo:latest
+      - image:  shaacr.azurecr.io/spring-mongo:${env.BUILD_NUMBER}
         imagePullPolicy: Always
         name: springboot
         ports:
