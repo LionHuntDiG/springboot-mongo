@@ -1,16 +1,12 @@
 {
     "containerDefinitions": [
         {
-            "name": "sleep",
-            "image": "busybox",
+            "name": "spring-boot",
+            "image": "public.ecr.aws/e2d0z1z4/demo:latest",
             "cpu": 10,
-            "command": [
-                "sleep",
-                "360"
-            ],
             "memory": 10,
             "essential": true
         }
     ],
-    "family": "sleep360"
+    "family": "spring-boot"
 }
