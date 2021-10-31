@@ -3,8 +3,8 @@
         {
             "name": "spring-boot",
             "image": "public.ecr.aws/e2d0z1z4/demo:latest",
-            "cpu": 10,
-            "memory": 10,
+            "cpu": 500,
+            "memory": 250,
             "essential": true
         }
     ],
