@@ -3,21 +3,25 @@
 	"platformFamily": "LINUX",
 	"operatingSystemFamily": "LINUX",
 	"networkMode": "awsvpc",
-	"containerDefinitions": [{
+	"containerDefinitions": [
+		{
 		"name": "spring-boot",
 		"image": "public.ecr.aws/e2d0z1z4/demo:latest",
-		"portMappings": [{
+		"portMappings": [
+			{
 			"containerPort": 8080,
 			"hostPort": 8080,
 			"protocol": "tcp"
-		}],
+		}
+		],
 		"essential": true,
 		"entryPoint": [
 			"sh",
 			"-c"
 		]
 
-	}],
+	}
+	],
 	"requiresCompatibilities": [
 		"FARGATE"
 	],
