@@ -1,7 +1,7 @@
 {
 	"family": "mydemo",
 	"platformFamily": "LINUX",
-	"operatingSystemFamily": "LINUX"
+	"operatingSystemFamily": "LINUX",
 	"networkMode": "awsvpc",
 	"containerDefinitions": [{
 		"name": "spring-boot",
