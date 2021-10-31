@@ -16,7 +16,7 @@
             "essential": true, 
             "entryPoint": [
                 "sh",
-		        "-c"
+		"-c"
             ], 
             
         }
