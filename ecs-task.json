@@ -1,6 +1,5 @@
 {
 	"family": "mydemo",
-	"operatingSystemFamily": "LINUX",
 	"networkMode": "awsvpc",
 	"containerDefinitions": [
 		{
