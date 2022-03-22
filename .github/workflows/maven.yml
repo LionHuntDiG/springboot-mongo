@@ -46,7 +46,7 @@ jobs:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
   
     - name: Azure Kubernetes set context
-      uses: Azure/aks-set-context@v2.0
+      uses: Azure/aks-set-context@v2.1
       with:
         # Azure credentials i.e. output of `az ad sp create-for-rbac --sdk-auth`
         creds: ${{ secrets.AZURE_CREDENTIALS }}
