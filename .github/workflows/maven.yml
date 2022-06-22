@@ -55,7 +55,7 @@ jobs:
         # AKS Cluster Name
         cluster-name: funAKS
      
-    - uses: azure/k8s-create-secret@v2.1
+    - uses: azure/k8s-create-secret@v4.0
       name: Create imagepullsecret for ACR
       with:
         container-registry-url: ${{ secrets.REGISTRY_NAME }}.azurecr.io
