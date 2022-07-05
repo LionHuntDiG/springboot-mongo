@@ -1,4 +1,4 @@
-FROM openjdk:17-alpine
+FROM openjdk:19-alpine
 
 # Required for starting application up.
 RUN apk update && apk add /bin/sh
